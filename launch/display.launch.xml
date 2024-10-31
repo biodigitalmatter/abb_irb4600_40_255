@@ -1,0 +1,17 @@
+<launch>
+  <arg name='jsp_gui'
+    default='true'
+    description='Use joint state publisher gui.' />
+
+  <arg name='rviz_config'
+    default='$(find-pkg-share urdf_launch)/config/urdf.rviz'
+    description='RViz configuration file.' />
+
+  <include file='$(find-pkg-share urdf_launch)/launch/display.launch.py'>
+    <arg name='urdf_package' value='abb_irb4600_40_255' />
+    <arg name='urdf_package_path' value='urdf/abb_irb4600_40_255.xacro' />
+    <arg name='jsp_gui' value='$(var jsp_gui)' />
+    <arg name='rviz_config' value='$(var rviz_config)' />
+  </include>
+
+</launch>

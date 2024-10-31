@@ -1,0 +1,6 @@
+<launch>
+    <include file='$(find-pkg-share urdf_launch)/launch/description.launch.py'>
+        <arg name='urdf_package' value='abb_irb4600_40_255' />
+        <arg name='urdf_package_path' value='urdf/abb_irb4600_40_255.xacro' />
+    </include>
+</launch>
